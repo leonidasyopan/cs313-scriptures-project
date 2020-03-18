@@ -1,26 +1,28 @@
-function searchByBook(bookId, callback) {
+function searchByBook(book, callback) {
 
-    var results = {list: [{id:1, book:"Gen", chapter:1, verse:3, content:"test"},
-                          {id:2, book:"Gen", chapter:2, verse:3, content:"test"},
-                          {id:3, book:"Gen", chapter:3, verse:3, content:"test"}]}
+    console.log("Searching the DB for book: " + book);
+
+    var results = {list:[{id:1, book:book , chapter:1, verse:3, content:"test"}, 
+    {id:2, book:book, chapter:2, verse:3, content:"test"}, 
+    {id:3, book:book, chapter:3, verse:3, content:"test"}]}
 
     callback(null, results);
 }
 
 function searchByTopic(topicId, callback) {
 
-    var results = {list: [{id:1, book:"Gen", chapter:1, verse:3, content:"test"},
-                          {id:2, book:"Gen", chapter:2, verse:3, content:"test"},
-                          {id:3, book:"Gen", chapter:3, verse:3, content:"test"}]}
+    var results = {list: [{id:1, book:"Gen", chapter:1, verse:3, content:"test"}, 
+    {id:2, book:"Gen", chapter:2, verse:3, content:"test"}, 
+    {id:3, book:"Gen", chapter:3, verse:3, content:"test"}]}
 
     callback(null, results);
 }
 
 function getAllScriptures(callback) {
 
-    var results = {list: [{id:1, book:"Gen", chapter:1, verse:3, content:"test"},
-                          {id:2, book:"Gen", chapter:2, verse:3, content:"test"},
-                          {id:3, book:"Gen", chapter:3, verse:3, content:"test"}]}
+    var results = {list: [{id:1, book:"Gen", chapter:1, verse:3, content:"test"}, 
+    {id:2, book:"Gen", chapter:2, verse:3, content:"test"}, 
+    {id:3, book:"Gen", chapter:3, verse:3, content:"test"}]}
 
     callback(null, results);
 }
@@ -49,7 +51,7 @@ function assignTopicToScripture(topicId, scriptureId, callback) {
 
 module.exports = {
     searchByBook: searchByBook,
-    searchByTopic: searchByTopic
+    searchByTopic: searchByTopic,
     getAllScriptures: getAllScriptures,
     getScriptureById: getScriptureById,
     insertNewScripture: insertNewScripture,

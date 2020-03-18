@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scriptures</title>
+
+    <script src="scriptures-clientside.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Search the Scriptures</h1>
+
+    <input type="text" name="book" id="book" placeholder="Book">
+
+    <button onclick="searchByBook()">Search by Book</button>
+    <br>
+    <br>
+
+    <input type="text" name="topic" id="topic" placeholder="Topic">
+
+    <button onclick="searchByTopic()">Search by Book</button>
+
+    <div>
+        <h2>Results</h2>
+        <ul id="ulScriptures">
+
+        </ul>
+    </div>
+
 </body>
 </html>
